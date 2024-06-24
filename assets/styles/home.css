@@ -1,0 +1,145 @@
+#cabecalho {
+    /* background-color: var(--color-background); */
+    height: 7rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 3rem;
+
+    /* position: fixed; */
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+}
+
+.title-project {
+    display: flex;
+    align-items: center;
+}
+
+.logo-project {
+    width: 35px;
+    margin-right: .5rem;
+}
+
+.name-project {
+    font-family: var(--font-title);
+    font-weight: 600;
+    font-size: 25px;
+    cursor: default;
+    
+    background-image: linear-gradient(to bottom, var(--colorlight-gradient), var(--colorstrong-gradient));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: var(--color-background);
+}
+
+.list-navigation {
+    display: flex;
+    gap: 3rem;
+}
+
+.link-navigation {
+    color: var(--color-gray);
+    font-family: var(--font-text);
+    text-decoration: none;
+    text-transform: capitalize;
+    display: flex;
+    gap: .5rem;
+}
+
+.link-navigation:hover {
+    color: var(--color-text);
+    transition: .5s ease;
+}
+
+.link-navigation:hover svg{
+    fill: var(--color-text);
+    transition: .5s ease;
+}
+
+.navbar-animation {
+    width: 0;
+    height: 3px;
+    margin-top: 1rem;
+    background: linear-gradient(to bottom, var(--colorlight-gradient), var(--colorstrong-gradient));
+    border-radius: 6px 6px 0 0;
+}
+
+.item-navigation:hover .navbar-animation{
+    width: 100%;
+    transition: width .5s ease;
+}
+
+#login {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: .7rem 1rem .7rem 1rem;
+    border-radius: 20px;
+    background: linear-gradient(to bottom, var(--colorlight-gradient), var(--colorstrong-gradient));
+}
+
+.text-login {
+    font-family: var(--font-text);
+    margin-left: .7rem;
+    color: var(--color-text);
+}
+
+#container-start {
+    width: 100%;
+    height: 100vh;
+}
+
+.background-video {
+    min-width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 0;
+}
+
+.background-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.box-start {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+    background: linear-gradient(to top right, rgb(0, 0, 0, .9), transparent);
+    display: flex;
+    align-items: center;
+}
+
+.content {
+    margin-left: 8rem;
+    width: 30%;
+}
+
+.content h2, .content p{
+    color: var(--color-text);
+    margin-top: 1rem;
+}
+
+.content h2 {
+    font-family: var(--font-title);
+    font-weight: 600;
+    font-size: 2rem;
+
+    background-image: linear-gradient(to bottom, var(--colorlight-gradient), var(--colorstrong-gradient));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: var(--color-background);
+}
+ 
+.content p {
+    font-family: var(--font-text);
+    font-weight: 300;
+    line-height: 1.3rem;
+}

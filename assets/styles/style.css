@@ -1,16 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import url(./reset.css);
-@import url(./header.css);
+@import url(./home.css);
+@import url(./product.css);
 
 :root {
     --color-background: #262525;
-    --color-primary: #fff;
-    /* --bluelight-gradient: rgb(5, 215, 244);
-    --bluestrong-gradient: rgb(0, 161, 226); */
+    --color-text: #fff;
 
-    --bluelight-gradient: rgb(139, 18, 252);
-    --bluestrong-gradient: rgb(111, 18, 245);
+    --colorlight-gradient: rgb(139, 18, 252);
+    --colorstrong-gradient: rgb(111, 18, 245);
 
     --color-gray: rgb(182, 182, 182);
     --font-title: 'Montserrat', sans-serif;
@@ -29,3 +28,9 @@ button {
     font-family: var(--font-text);
     font-size: 1.2rem;
 }
+
+/* .container-div{
+    height: .8rem;
+    width: 100%;
+    background: linear-gradient(to bottom, var(--colorlight-gradient), var(--colorstrong-gradient));
+} */
