@@ -1,0 +1,32 @@
+#rodape {
+    background-color: var(--color-background);
+    border-top: 3px solid rgba(182, 182, 182, 0.1);
+    padding: 2rem 3rem;
+}
+
+.rodape-texts {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.rodape-texts p {
+    font-family: var(--font-title);
+    color: var(--color-gray);
+}
+
+.rodape-texts div > a {
+    text-decoration: none;
+    font-family: var(--font-title);
+    font-weight: bold;
+
+    background-image: linear-gradient(to bottom, var(--colorlight-gradient), var(--colorstrong-gradient));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: var(--color-background);
+
+    display: flex;
+    align-items: center;
+    gap: .7rem;
+}

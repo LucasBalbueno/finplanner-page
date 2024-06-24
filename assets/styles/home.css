@@ -1,11 +1,11 @@
 #cabecalho {
-    /* background-color: var(--color-background); */
     height: 7rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 3rem;
-
+    
+    /* background-color: var(--color-background); */
     /* position: fixed; */
     position: absolute;
     width: 100%;
@@ -72,7 +72,7 @@
     transition: width .5s ease;
 }
 
-#login {
+#subscribe-home {
     display: flex;
     align-items: center;
     cursor: pointer;
@@ -81,7 +81,7 @@
     background: linear-gradient(to bottom, var(--colorlight-gradient), var(--colorstrong-gradient));
 }
 
-.text-login {
+.text-subscribe {
     font-family: var(--font-text);
     margin-left: .7rem;
     color: var(--color-text);

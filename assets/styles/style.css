@@ -3,6 +3,8 @@
 @import url(./reset.css);
 @import url(./home.css);
 @import url(./product.css);
+@import url(./contact.css);
+@import url(./rodape.css);
 
 :root {
     --color-background: #262525;
