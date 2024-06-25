@@ -32,5 +32,21 @@ const contactButtonSubmit = document.getElementById('contact-button-submit');
 contactButtonSubmit.addEventListener('click', (event) => {
     event.preventDefault();
 
-    alert('seus dados foram recebidos com sucesso! Manteremos você atualizado das novidades através do meio de comunicação escolhido.')
-})
+    alert('Seus dados foram recebidos com sucesso! Manteremos você atualizado das novidades através do meio de comunicação escolhido.');
+});
+
+window.addEventListener('scroll', () => {
+    const header = document.getElementById('cabecalho');
+
+    header.classList.toggle('headerScroll', window.scrollY > 0);
+});
+
+const planButtons = document.getElementsByClassName('table-prices-button');
+
+Array.from(planButtons).forEach(button => {
+    button.addEventListener('click', (event) => {
+        event.preventDefault();
+        alert('Novo plano selecionado com sucesso!');
+        console.log('teste');
+    });
+});

@@ -87,7 +87,6 @@
 .table-prices-body tr > td {
     text-align: center;
     width: 13rem;
-    /* padding: .3rem; */
 }
 
 .table-prices-body tr > td > img {
@@ -141,7 +140,6 @@
 
 .apresentation-subscribe {
     justify-content: center;
-    /* align-items: center; */
     gap: 10rem;
 }
 
