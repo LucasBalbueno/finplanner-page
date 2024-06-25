@@ -5,6 +5,8 @@
 @import url(./product.css);
 @import url(./contact.css);
 @import url(./rodape.css);
+@import url(./modal.css);
+@import url(./animations/observer.css);
 
 :root {
     --color-background: #262525;

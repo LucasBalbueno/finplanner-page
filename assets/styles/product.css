@@ -126,7 +126,7 @@
     background-color: var(--color-background);
 }
 
-#subscribe-button {
+.subscribe-button-apresentation {
     background-color: greenyellow;
     padding: 2rem;
     border-radius: 20px;

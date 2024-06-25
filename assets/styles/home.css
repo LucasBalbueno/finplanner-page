@@ -72,7 +72,7 @@
     transition: width .5s ease;
 }
 
-#subscribe-home {
+.subscribe-home {
     display: flex;
     align-items: center;
     cursor: pointer;

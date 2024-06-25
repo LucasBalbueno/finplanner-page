@@ -64,10 +64,6 @@
     margin: .5rem 0 1rem 0;
 }
 
-.forms-terms {
-    margin-top: 1.5rem;
-}
-
 .form-term {
     margin: 1rem 0;
     display: flex;
@@ -81,4 +77,18 @@ input[type=checkbox] {
     cursor: pointer;
     width: 20px;
     height: 20px;
+}
+
+.contact-button {
+    background-color:  var(--colorlight-gradient);
+    padding: 1rem 3rem;
+    border-radius: 30px;
+    margin-top: 1.3rem;
+    color: var(--color-text);
+    cursor: pointer;
+}
+
+.contact-button:hover {
+    background-color: var(--colorstrong-gradient);
+    transition: .5s ease;
 }
