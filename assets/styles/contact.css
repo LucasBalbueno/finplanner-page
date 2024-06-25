@@ -2,8 +2,10 @@
     height: 100vh;
     background-color: var(--color-background);
     display: flex;
+    flex-direction: row-reverse;
     align-items: center;
     justify-content: center;
+    gap: 5rem;
 }
 
 #contact-form {
@@ -13,33 +15,45 @@
     align-items: center;
 }
 
-#contact-form h4, #contact-form p {
+.contact-content h4, .contact-content p {
     margin-bottom: 1rem;
-}
-
-#contact-form h4 {
-    font-family: var(--font-title);
-    font-size: 2.5rem;
-    font-weight: bold;
-}
-
-#contact-form p {
-    font-family: var(--font-text);
-    font-size: 1.3rem;
-    margin-bottom: 2rem;
-    width: 60%;
+    color: var(--color-text);
+    width: 25rem;
     text-align: center;
 }
 
+.contact-content h4 {
+    font-family: var(--font-title);
+    font-size: 3.5rem;
+    font-weight: bold;
+    text-align: center;
+
+    background-image: linear-gradient(to bottom, var(--colorlight-gradient), var(--colorstrong-gradient));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: var(--color-background);
+}
+
+.contact-content p {
+    font-family: var(--font-text);
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+}
+
+.contact-content img {
+    width: 25rem;
+}
+
 .forms-inputs {
-    width: 50%;
+    width: 100%;
     display: flex;
     flex-direction: column;
 }
 
 #contact-form div label {
     font-family: var(--font-text);
-    margin: 1rem 0 .5rem 1.5rem;
+    margin-left: 1.2rem;
 }
 
 .forms-input{
@@ -47,6 +61,7 @@
     font-size: 1.2rem;
     border: none;
     border-radius: 30px;
+    margin: .5rem 0 1rem 0;
 }
 
 .forms-terms {
@@ -55,4 +70,15 @@
 
 .form-term {
     margin: 1rem 0;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: start;
+}
+
+input[type=checkbox] {
+    position: relative;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
 }

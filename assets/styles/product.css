@@ -115,7 +115,7 @@
     padding: 1rem;
     background: linear-gradient(to right, var(--colorlight-gradient), var(--colorstrong-gradient));
     border-radius: 30px;
-    margin: 1rem 0;
+    margin: 2rem 0 5rem 0;
     color: var(--color-text);
 }
 
@@ -127,14 +127,25 @@
 }
 
 #subscribe-button {
-    background: linear-gradient(to right, var(--colorlight-gradient), var(--colorstrong-gradient));
+    background-color: greenyellow;
     padding: 2rem;
     border-radius: 20px;
-    font-size: 1.5rem;
-    margin: 6rem;
+    font-size: 1.3rem;
+    margin-top: 4rem;
     font-family: var(--font-title);
     font-weight: bold;
-    color: var(--color-text);
-
+    color: var(--color-background);
+    box-shadow: 10px 10px 0px var(--color-background);
     cursor: pointer;
+}
+
+.apresentation-subscribe {
+    justify-content: center;
+    /* align-items: center; */
+    gap: 10rem;
+}
+
+.apresentation-subscribe img {
+    border-radius: 0px;
+    border: none;
 }
