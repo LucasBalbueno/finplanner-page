@@ -1,0 +1,26 @@
+.main {
+    display: flex;
+}
+
+.menu-lateral-app {
+    background-color: var(--color-background);
+    width: 20%;
+    height: 100vh;
+}
+
+.title-project-lateral {
+    display: flex;
+    align-items: center;
+}
+
+.title-project-lateral > img {
+    width: 35px;
+    margin-right: .5rem;
+}
+
+.navegacao-lista > li {
+    margin: 1rem;
+    color: white;
+    font-size: 17px;
+    font-family: var(--font-text);
+}
