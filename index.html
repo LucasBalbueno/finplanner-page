@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FinPlanner</title>
+    <title>FinPlanner LP</title>
     <link rel="stylesheet" href="./assets/styles/style.css">
     <link rel="icon" href="./assets/imgs/icons/wallet-fill.svg" type="image/svg+xml">
 </head>
@@ -55,10 +55,10 @@
             </ul>
         </nav>
 
-        <button id="subscribe-button-home" class="subscribe-home">
+        <a href="./src/pages/app.html" target="_blank" id="subscribe-button-home" class="subscribe-home">
             <img src="./assets/imgs/icons/loginIcon.svg" alt="">
-            <p class="text-subscribe">Inscreva-se</p>
-        </button>
+            <p class="text-subscribe">Entrar no App</p>
+        </a>
     </header>
 
     <main>
@@ -219,9 +219,9 @@
                     <h3>Não Perca Mais Tempo e Dinheiro!</h3>
                     <p>Transforme sua vida financeira com nosso app. Organize suas finanças, reduza gastos e alcance suas metas rapidamente. Junte-se aos milhares de usuários satisfeitos e comece a viver com mais tranquilidade. Faça sua escolha agora!</p>
                     
-                    <button id="subscribe-button-apresentation" class="subscribe-button-apresentation">
-                        Quero me inscrever agora
-                    </button>
+                    <a href="./src/pages/app.html" target="_blank" id="subscribe-button-apresentation" class="subscribe-button-apresentation">
+                        Quero experimentar o app
+                    </a>
                 </div>
                 <img class="hiddenLeft" src="./assets/imgs/ilustrator3d.png" alt="Imagem de gestão financeira">
             </div>
@@ -279,81 +279,6 @@
                 </div>
             </div>
         </footer>
-
-        <div id="modal" class="background-modal">
-            <div class="container-modal">
-                <div class="modal-header">
-                    <h3>Insira seus dados</h3>
-                    <button id="subscribe-button-close">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="black" class="bi bi-x-circle" viewBox="0 0 16 16">
-                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
-                            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
-                        </svg>
-                    </button>
-                </div>
-
-                <form id="form-subscribe">
-                    <div class="form-inputs" >
-                        <label for="name">Nome completo</label>
-                        <input type="text" name="name" placeholder="Seu nome...">
-                    </div>
-
-                    <div class="form-inputs" >
-                        <label for="age">Idade</label>
-                        <input type="number" name="age" placeholder="Sua idade...">
-                    </div>
-
-                    <div class="form-inputs" >
-                        <label for="email">E-mail</label>
-                        <input type="email" name="email" placeholder="Seu melhor email...">
-                    </div>
-
-                    <div class="form-inputs" >
-                        <label for="phoneNumber">Número de telefone</label>
-                        <input type="text" name="phoneNumber" placeholder="Seu telefone para contato...">
-                    </div>
-
-                    <div class="forms-questions">
-                        <div class="form-select" >
-                            <label for="question1">Você costuma organzar suas finanças?</label>
-                            <select name="question1">
-                                <option>Escolher</option>
-                                <option>Já sou organizado(a) financeiramente mas procuro uma plataforma para facilitar a gestão</option>
-                                <option>Me organizei por um período mas não consigo manter constância na gestão financeira</option>
-                                <option>Nunca me organizei financeiramente e não sei como realizar a minha gestão financeira</option>
-                            </select>
-                        </div>
-    
-                        <div class="form-select" >
-                            <label for="question2">Qual o seu objetivo financeiro atual?</label>
-                            <select name="question2">
-                                <option>Escolher</option>
-                                <option>Sou inadimplente e quero me livrar de dividas grandes</option>
-                                <option>Estou endividado e quero me livrar de dividas pequenas/médias</option>
-                                <option>Não estou endividado mas quero começar minha gestão financeira para poupar dinheiro</option>
-                                <option>Já possuo uma quantia poupada e quero aprender a investir</option>
-                                <option>Já sei investir e quero uma plataforma para organizar meus investimentos</option>
-                            </select>
-                        </div>
-    
-                        <div class="form-select" >
-                            <label for="question3">Você possui algum patrimônio investido?</label>
-                            <select name="question3">
-                                <option>Escolher</option>
-                                <option>Não, não possuo nenhuma quantia investida</option>
-                                <option>Sim, possuo entre 1k e 10k investidos</option>
-                                <option>Sim, possuo entre 10k e 20k investidos</option>
-                                <option>Sim, possuo entre 20k e 50k investidos</option>
-                                <option>Sim, possuo entre 50k e 200k investidos</option>
-                                <option>Sim, possuo mais de 200k investidos</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <button id="subscribe-button-submit" class="form-subscribe-button">Fazer Inscrição</button>
-                </form>
-            </div>
-        </div>
     </main>
 
     <script type="module" src="./src/js/index.js"></script>

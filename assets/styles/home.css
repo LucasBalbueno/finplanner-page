@@ -92,6 +92,7 @@
     padding: .7rem 1rem .7rem 1rem;
     border-radius: 20px;
     background: linear-gradient(to bottom, var(--colorlight-gradient), var(--colorstrong-gradient));
+    text-decoration: none;
 }
 
 .text-subscribe {

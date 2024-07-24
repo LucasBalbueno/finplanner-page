@@ -1,39 +1,39 @@
 import './observer.js';
 
-const subscribeButtonHome = document.getElementById('subscribe-button-home');
-const subscribeButtonApresentation = document.getElementById('subscribe-button-apresentation');
+// const subscribeButtonHome = document.getElementById('subscribe-button-home');
+// const subscribeButtonApresentation = document.getElementById('subscribe-button-apresentation');
 
-const modalButtonClose = document.getElementById('subscribe-button-close');
-const modal = document.getElementById('modal');
+// const modalButtonClose = document.getElementById('subscribe-button-close');
+// const modal = document.getElementById('modal');
 
-subscribeButtonHome.addEventListener('click', modalOpen);
-subscribeButtonApresentation.addEventListener('click', modalOpen);
+// subscribeButtonHome.addEventListener('click', modalOpen);
+// subscribeButtonApresentation.addEventListener('click', modalOpen);
 
-modalButtonClose.addEventListener('click', modalClose);
+// modalButtonClose.addEventListener('click', modalClose);
 
-function modalOpen () {
-    modal.classList.add('modalOpen');
-};
+// function modalOpen () {
+//     modal.classList.add('modalOpen');
+// };
 
-function modalClose () {
-    modal.classList.remove('modalOpen');
-};
+// function modalClose () {
+//     modal.classList.remove('modalOpen');
+// };
 
-const subscribeButtonSubmit = document.getElementById('subscribe-button-submit');
+// const subscribeButtonSubmit = document.getElementById('subscribe-button-submit');
 
-subscribeButtonSubmit.addEventListener('click', (event) => {
-    event.preventDefault();
+// subscribeButtonSubmit.addEventListener('click', (event) => {
+//     event.preventDefault();
 
-    alert('Seu cadastro foi realizado com sucesso! Preencha o formulário de contato para ficar por dentro das novidades.');
-})
+//     alert('Seu cadastro foi realizado com sucesso! Preencha o formulário de contato para ficar por dentro das novidades.');
+// })
 
-const contactButtonSubmit = document.getElementById('contact-button-submit');
+// const contactButtonSubmit = document.getElementById('contact-button-submit');
 
-contactButtonSubmit.addEventListener('click', (event) => {
-    event.preventDefault();
+// contactButtonSubmit.addEventListener('click', (event) => {
+//     event.preventDefault();
 
-    alert('Seus dados foram recebidos com sucesso! Manteremos você atualizado das novidades através do meio de comunicação escolhido.');
-});
+//     alert('Seus dados foram recebidos com sucesso! Manteremos você atualizado das novidades através do meio de comunicação escolhido.');
+// });
 
 window.addEventListener('scroll', () => {
     const header = document.getElementById('cabecalho');

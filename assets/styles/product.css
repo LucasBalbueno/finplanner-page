@@ -54,6 +54,7 @@
     font-weight: 300;
     line-height: 1.3rem;
     color: var(--color-text);
+    margin-bottom: 4rem;
 }
 
 .apresentation-reverse div {
@@ -130,12 +131,13 @@
     padding: 2rem;
     border-radius: 20px;
     font-size: 1.3rem;
-    margin-top: 4rem;
+    margin-top: 50px;
     font-family: var(--font-title);
     font-weight: bold;
     color: var(--color-background);
     box-shadow: 10px 10px 0px var(--color-background);
     cursor: pointer;
+    text-decoration: none;
 }
 
 .apresentation-subscribe {
