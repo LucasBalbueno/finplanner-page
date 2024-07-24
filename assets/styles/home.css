@@ -19,6 +19,11 @@
     align-items: center;
 }
 
+.title-project > img {
+    width: 35px;
+    margin-right: .5rem;
+}
+
 .logo-project {
     width: 35px;
     margin-right: .5rem;
