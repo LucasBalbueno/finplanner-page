@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FinPlanner APP</title>
+    <title>FinPlanner Relatórios</title>
     <link rel="icon" href="../../assets/imgs/icons/wallet-fill.svg"" type=" image/svg+xml">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="../../assets/styles/style.css">
@@ -24,11 +24,11 @@
 
                 <nav class="cabecalho-navegacao">
                     <ul class="navegacao-lista">
-                        <li class="active">
+                        <li>
                             <img src="../../assets/imgs/icons/home.svg" alt="Icone Relatórios">
                             <a href="./app.html">Menu</a>
                         </li>
-                        <li>
+                        <li class="active">
                             <img src="../../assets/imgs/icons/relatorios.svg" alt="Icone Relatórios">
                             <a href="./appRelatorios.html">Relatórios</a>
                         </li>
@@ -55,31 +55,25 @@
         </header>
 
         <section class="container-principal container-banner">
-            <h2>Controle suas finanças Hoje!</h2>
-            <!-- Slider main container -->
-            <div class="swiper">
-                <!-- Additional required wrapper -->
-                <div class="swiper-wrapper">
-                    <!-- Slides -->
-                    <div class="swiper-slide">
-                        <img src="../../assets/imgs/ImgCarousel.jpg" alt="Banner Principal 1">
+            <div class="container-relatorio">
+                <div class="relatorio-valores">
+                    <div class="valores-ganhos">
+                        <p>Ganhos</p>
+                        <span>R$ 1500,00</span>
                     </div>
-                    <div class="swiper-slide">
-                        <img src="../../assets/imgs/ImgCarousel2.jpg" alt="Banner Principal 2">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="../../assets/imgs/ImgCarousel3.png" alt="Banner Principal 3">
+                    <div class="valores-gastos">
+                        <p>Gastos</p>
+                        <span>R$ 1700,00</span>
                     </div>
                 </div>
-
-                <!-- If we need navigation buttons -->
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-
-                <!-- If we need scrollbar -->
-                <div class="swiper-scrollbar"></div>
+                
+                <div class="relatorio-saldo">
+                    <div class="valores-saldo">
+                        <p>Saldo Total</p>
+                        <span>R$ 2000,00</span>
+                    </div>
+                </div>
             </div>
-
         </section>
     </main>
 

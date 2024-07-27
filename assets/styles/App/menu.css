@@ -69,9 +69,12 @@
 
     height: 4rem;
     color: var(--color-gray);
-    /* background: linear-gradient(to right, var(--colorlight-gradient), var(--colorstrong-gradient)); */
 }
 
 .btn-toggleMode > img {
     margin-right: .7rem;
+}
+
+.active {
+    background: linear-gradient(to right, var(--colorlight-gradient), var(--colorstrong-gradient));
 }

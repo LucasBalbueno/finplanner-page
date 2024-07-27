@@ -9,7 +9,7 @@
   object-fit: cover;
 }
 
-.container-principal {
+.container-banner {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -17,12 +17,12 @@
   gap: 2rem;
 }
 
-.container-principal > h2 {
+.container-banner > h2 {
   font-family: var(--font-title);
   font-size: 40px;
   font-weight: 600;
   background-image: linear-gradient(to right, var(--colorlight-gradient), var(--colorstrong-gradient));
-  color: transparent;
-
   -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }

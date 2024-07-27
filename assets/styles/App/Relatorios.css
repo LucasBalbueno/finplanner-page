@@ -1,0 +1,71 @@
+.container-relatorio {
+    width: 70%;
+    height: 60%;
+}
+
+.relatorio-valores {
+    display: flex;
+    width: 100%;
+    height: 50%;
+}
+
+.relatorio-saldo {
+    height: 50%;
+}
+
+.valores-ganhos {
+    width: 50%;
+    font-family: var(--font-title);
+    font-size: 30px;
+    font-weight: 600;
+    padding: 2rem;
+    
+    color: rgb(6, 171, 6);
+    
+    border: 3px solid var(--colorlight-gradient);;
+    border-radius: 20px;
+    margin: 1rem;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.valores-gastos {
+    width: 50%;
+    font-family: var(--font-title);
+    font-size: 30px;
+    font-weight: 600;
+    padding: 2rem;
+    
+    color: rgb(229, 37, 37);
+    
+    border: 3px solid var(--colorlight-gradient);;
+    border-radius: 20px;
+    margin: 1rem;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.valores-saldo {
+    height: 100%;
+    font-family: var(--font-title);
+    font-size: 30px;
+    font-weight: 600;
+    padding: 2rem;
+
+    color: var(--colorlight-gradient);;
+
+    border: 3px solid var(--colorlight-gradient);
+    border-radius: 20px;
+    margin: 0 1rem 1rem 1rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
