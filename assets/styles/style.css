@@ -10,6 +10,7 @@
 
 @import url(./App/menu.css);
 @import url(./App/Relatorios.css);
+@import url(./App//swiper.css);
 
 :root {
     --color-background: #262525;
