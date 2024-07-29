@@ -1,7 +1,7 @@
 import './observer.js';
 import './swiper.js'
 import './app.js'
-import './database.js'
+import './listNotes.js'
 
 window.addEventListener('scroll', () => {
     const header = document.getElementById('cabecalho');
@@ -15,6 +15,5 @@ Array.from(planButtons).forEach(button => {
     button.addEventListener('click', (event) => {
         event.preventDefault();
         alert('Novo plano selecionado com sucesso!');
-        console.log('teste');
     });
 });

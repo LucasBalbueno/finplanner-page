@@ -1,23 +1,20 @@
-import { FinanceNotes, DataBase } from "./database.js";
+import { DataBase } from "./database.js";
+import { FinanceNotes } from "./financeNotes.js";
 
 const buttonOpen = document.getElementById('buttonAdd');
 const btnClose = document.getElementById('btnClose');
 const modalForms = document.getElementById('formsApp');
 
-// const buttonSubmit = document.getElementById('buttonSubmit');
 const formGanhos = document.getElementById('formAppGanhos');
 const formGastos = document.getElementById('formAppGastos');
 
 // function Abre o forms
-function openModal (event) {
-    // event.preventDefault();
+function openModal () {
     modalForms.classList.add('formActivated');
 }
 
 // function fecha o forms
-
-function closeModal (event) {
-    // event.preventDefault();
+function closeModal () {
     modalForms.classList.remove('formActivated');
 
     clearInputs()

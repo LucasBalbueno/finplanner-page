@@ -88,24 +88,24 @@
     gap: .5rem;
 }
 
-.item-description > h3 {
+.item-descriptionTitle {
     font-size: 25px;
 }
 
-.item-description > p {
+.item-descriptionInfos {
     font-size: 15px;
 }
 
-#data {
+.item-data {
     font-size: 17px;
     font-weight: bold;
 }
 
-#price {
+.item-price {
     font-weight: bold;
 }
 
-.item-buttons > img {
+.item-button {
     width: 20px;
     margin-left: 1rem;
     cursor: pointer;

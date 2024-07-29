@@ -1,24 +1,4 @@
-class FinanceNotes {
-    constructor (type, title, infos, date, valor) {
-        this.type = type;
-        this.title = title;
-        this.infos = infos;
-        this.date = date;
-        this.valor = valor;
-    }
-
-    // função para validar dados
-    validateData(){
-        for (let i in this){
-            if(this[i] === undefined || this[i] === ""){
-                return false
-            }
-        }
-        return true
-    }
-}
-
-class DataBase {
+export class DataBase {
     constructor(){
         const id = localStorage.getItem('id')
 
@@ -64,5 +44,3 @@ function nextId () {
     const id = localStorage.getItem('id');
     return parseInt(id) + 1;
 }
-
-export { FinanceNotes, DataBase };
