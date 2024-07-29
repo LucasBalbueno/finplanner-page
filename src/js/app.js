@@ -1,3 +1,5 @@
+import { FinanceNotes, DataBase } from "./database.js";
+
 const buttonOpen = document.getElementById('buttonAdd');
 const btnClose = document.getElementById('btnClose');
 const modalForms = document.getElementById('formsApp');
@@ -68,13 +70,18 @@ function getValueForm(idForm) {
     }
 }
 
+const dataBase = new DataBase();
+
 if (formGanhos) {
     formGanhos.addEventListener('submit', (event) => {
         event.preventDefault()
 
         if (event.submitter.name === 'btnSubmitGanhos') {
-            const teste = getValueForm(event.target.id)
-            console.log(teste)
+            const formInfos = getValueForm(event.target.id)
+
+            const newForm = new FinanceNotes(formInfos)
+
+            dataBase.createFinanceNote(newForm)
         }
 
         closeModal()
@@ -86,8 +93,11 @@ if (formGastos) {
         event.preventDefault()
 
         if (event.submitter.name === 'btnSubmitGastos') {
-            const teste = getValueForm(event.target.id)
-            console.log(teste)
+            const formInfos = getValueForm(event.target.id)
+
+            const newForm = new FinanceNotes(formInfos)
+
+            dataBase.createFinanceNote(newForm)
         }
 
         closeModal()

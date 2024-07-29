@@ -1,6 +1,6 @@
 class FinanceNotes {
-    constructor (id, title, infos, date, valor) {
-        this.id = id;
+    constructor (type, title, infos, date, valor) {
+        this.type = type;
         this.title = title;
         this.infos = infos;
         this.date = date;
@@ -8,6 +8,14 @@ class FinanceNotes {
     }
 
     // função para validar dados
+    validateData(){
+        for (let i in this){
+            if(this[i] === undefined || this[i] === ""){
+                return false
+            }
+        }
+        return true
+    }
 }
 
 class DataBase {
@@ -20,7 +28,27 @@ class DataBase {
     }
 
     createFinanceNote(financeNote) {
-        localStorage.setItem(financeNote.id, JSON.stringify(financeNote))
+        const id = nextId()
+        localStorage.setItem(id, JSON.stringify(financeNote))
+        localStorage.setItem('id', id)
+    }
+
+    readerNotes(){
+        const notes = [];
+
+        const id = localStorage.getItem('id')
+
+        for (let i = 0; i <= id; i++){
+            const note = JSON.parse(localStorage.getItem(i));
+
+            if (note === null) {
+                continue
+            }
+
+            note.id = i;
+            notes.push(note)
+        }
+        return notes
     }
 
     removeTask(id) {
@@ -32,16 +60,9 @@ class DataBase {
     }
 }
 
-const newNote = new FinanceNotes(1, 'teste', 'infosteste', '14-07-05', 1500);
-const newNote2 = new FinanceNotes(2, 'teste', 'infosteste', '14-07-05', 1500);
+function nextId () {
+    const id = localStorage.getItem('id');
+    return parseInt(id) + 1;
+}
 
-const newData = new DataBase()
-
-// newData.resetAll()
-
-newData.createFinanceNote(newNote)
-newData.createFinanceNote(newNote2)
-
-// newData.removeTask(1)
-
-// ATÉ AQUI TUDO CERTO, LOCALSTORAGE MANTEM EM TODAS AS PÁGINAS
+export { FinanceNotes, DataBase };
