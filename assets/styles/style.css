@@ -12,6 +12,7 @@
 @import url(./App/Relatorios.css);
 @import url(./App//swiper.css);
 @import url(./App/ganhosEGastos.css);
+@import url(./App/formsApp.css);
 
 :root {
     --color-background: #262525;

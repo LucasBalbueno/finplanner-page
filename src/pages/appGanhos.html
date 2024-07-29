@@ -63,7 +63,7 @@
                             <img src="../../assets/imgs/icons/refresh.svg" alt="Resetar Lista">
                             <p>Resetar Lista</p>
                         </button>
-                        <button class="btn-add">
+                        <button id="buttonAdd" class="btn-add">
                             <img src="../../assets/imgs/icons/plus.svg" alt="Adicionar item">
                             <p>Adicionar</p>
                         </button>
@@ -95,6 +95,45 @@
                 Total R$ 1.500,00
             </div>
         </section>
+
+        <div id="formsApp" class="formsApp-background">
+            <div class="formsApp-container">
+
+                <h2 class="formsApp-title">Preencha os dados corretamente</h2>
+
+                <form class="formApp" id="formAppGanhos">
+                    <label class="formApp-item">
+                        <p>Título</p>
+                        <input name="title" type="text" placeholder="Trabalho de Design..." maxlength="30">
+                    </label>
+
+                    <label class="formApp-item">
+                        <p>Informação Adicional</p>
+                        <input name="infos" type="text" placeholder="Cards para Paula..." maxlength="50">
+                    </label>
+
+                    <label class="formApp-item">
+                        <p>Data</p>
+                        <input name="data" type="date"
+                    </label>
+
+                    <label class="formApp-item">
+                        <p>Valor</p>
+                        <input name="valor" type="number" placeholder="R$">
+                    </label>
+
+                    <div class="formApp-buttons">
+                        <button id="btnClose" class="formApp-button btn-close">
+                            Fechar
+                        </button>
+                        
+                        <button type="submit" class="formApp-button btn-check">
+                            Concluido
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
     </main>
 
     <script type="module" src="../js/index.js"></script>

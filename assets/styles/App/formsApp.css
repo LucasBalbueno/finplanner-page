@@ -1,0 +1,79 @@
+.formsApp-background {
+    position: absolute;
+    z-index: 2;
+
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.formActivated {
+    display: flex;
+}
+
+.formsApp-container {
+    background-color: var(--color-background);
+    width: 60%;
+    height: 85vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.formsApp-title {
+    font-family: var(--font-title);
+    font-size: 25px;
+    font-weight: bold;
+    color: rgb(146, 212, 47);
+}
+
+.formApp {
+    font-family: var(--font-text);
+    color: white;
+    width: 50%;
+}
+
+.formApp-item {
+    margin: .5rem;
+}
+
+.formApp-item > p {
+    font-size: 20px;
+    margin-bottom: .3rem;
+}
+
+.formApp-item > input {
+    width: 100%;
+    height: .5rem;
+    padding: 1.5rem;
+    border-radius: 10px;
+}
+
+.formApp-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.formApp-button {
+    margin-top: 1rem;
+    font-size: 20px;
+    padding: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.btn-check {
+    background-color: rgb(146, 212, 47);
+}
+
+.btn-close{
+    background-color: red;
+}
