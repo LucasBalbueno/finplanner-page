@@ -4,28 +4,33 @@ const database = new DataBase()
 const listDataGanhos = document.getElementById('listDataGanhos');
 const listDataGastos = document.getElementById('listDataGastos');
 
+const NotesArmazenadas = database.readerNotes();
+
 const lastId = localStorage.getItem('id')
-const NotesArmazenadas = database.readerNotes()
 
 for (let i = 0; i <= lastId; i++) {
     if (NotesArmazenadas[i]) {
         const { type } = NotesArmazenadas[i];
 
-        const typeNote = type.type
+        const typeNote = type.type;
         const title = type.title;
         const infos = type.infos;
-        const data = type.date;
+        const data = organizeDate(type.date);
         const valor = type.valor;
 
-        createElement(typeNote, title, infos, data, valor)
+        if (typeNote === 'ganho' && listDataGanhos) {
+            createElement(listDataGanhos, title, infos, data, valor);
+        } else if (typeNote === 'gasto' && listDataGastos) {
+            createElement(listDataGastos, title, infos, data, valor);
+        }
+
     } else {
         console.warn(`Note at index ${i} is undefined`);
     }
 }
 
-
 // função para criar elemento HTML de acordo com as informações recebidas
-function createElement(type, title, infos, data, valor) {
+function createElement(form, title, infos, data, valor) {
     const newElement = document.createElement('li');
 
     newElement.innerHTML = `
@@ -46,15 +51,9 @@ function createElement(type, title, infos, data, valor) {
 
     newElement.classList.add('lista-item')
 
-    if (type === 'ganho') {
-        listDataGanhos.appendChild(newElement);
-    } else if (type === 'gasto') {
-        listDataGastos.appendChild(newElement)
-    }
-
+    form.appendChild(newElement);
 }
 
-// createElement('ganho', 'Teste', 'infos adicionais', '23/07/2025', 2000)
-
-// IMPORTANTE
-// criar função de organizar data
+function organizeDate(date) {
+    return date.replace(/-/g, '/')
+}
