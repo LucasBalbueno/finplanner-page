@@ -31,7 +31,7 @@ export class DataBase {
         return notes
     }
 
-    removeTask(id) {
+    removeNote(id) {
         localStorage.removeItem(id)
     }
 
@@ -44,3 +44,8 @@ function nextId () {
     const id = localStorage.getItem('id');
     return parseInt(id) + 1;
 }
+
+const database = new DataBase()
+
+// database.removeNote(2)
+// database.resetAll()

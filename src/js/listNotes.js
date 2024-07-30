@@ -4,33 +4,45 @@ const database = new DataBase()
 const listDataGanhos = document.getElementById('listDataGanhos');
 const listDataGastos = document.getElementById('listDataGastos');
 
-const NotesArmazenadas = database.readerNotes();
+function organizeDate(date) {
+    return date.replace(/-/g, '/');
+}
 
+const NotesArmazenadas = database.readerNotes();
 const lastId = localStorage.getItem('id')
 
-for (let i = 0; i <= lastId; i++) {
-    if (NotesArmazenadas[i]) {
-        const { type } = NotesArmazenadas[i];
+function readNotes () {
+    if (listDataGanhos) {
+        listDataGanhos.innerHTML = '';
+    }
 
-        const typeNote = type.type;
-        const title = type.title;
-        const infos = type.infos;
-        const data = organizeDate(type.date);
-        const valor = type.valor;
+    if (listDataGastos) {
+        listDataGastos.innerHTML = '';
+    }
 
-        if (typeNote === 'ganho' && listDataGanhos) {
-            createElement(listDataGanhos, title, infos, data, valor);
-        } else if (typeNote === 'gasto' && listDataGastos) {
-            createElement(listDataGastos, title, infos, data, valor);
+    for (let i = 0; i <= lastId; i++) {
+        if (NotesArmazenadas[i]) {
+            const { type } = NotesArmazenadas[i];
+            
+            const typeNote = type.type;
+            const title = type.title;
+            const infos = type.infos;
+            const data = organizeDate(type.date);
+            const valor = type.valor;
+            
+            if (typeNote === 'ganho' && listDataGanhos) {
+                createElement(listDataGanhos, i, title, infos, data, valor);
+            } else if (typeNote === 'gasto' && listDataGastos) {
+                createElement(listDataGastos, i, title, infos, data, valor);
+            }
+            
         }
-
-    } else {
-        console.warn(`Note at index ${i} is undefined`);
     }
 }
 
-// função para criar elemento HTML de acordo com as informações recebidas
-function createElement(form, title, infos, data, valor) {
+readNotes()
+
+function createElement(form, id, title, infos, data, valor) {
     const newElement = document.createElement('li');
 
     newElement.innerHTML = `
@@ -44,16 +56,26 @@ function createElement(form, title, infos, data, valor) {
         <span class="item-price">R$ ${valor}</span>
 
         <div>
-            <img id="item-edit" class="item-button" src="../../assets/imgs/icons/penEdit.svg" alt="Editar">
-            <img id="item-delete" class="item-button" src="../../assets/imgs/icons/trash.svg" alt="Deletar">
+            <button class="item-edit" data-id="${id + 1}">
+                <img class="item-button" src="../../assets/imgs/icons/penEdit.svg" alt="Editar">
+            </button>
+            <button class="item-delete" data-id="${id + 1}">
+                <img class="item-button" src="../../assets/imgs/icons/trash.svg" alt="Deletar">
+            </button>
         </div>
     `;
 
-    newElement.classList.add('lista-item')
+    newElement.classList.add('lista-item');
 
     form.appendChild(newElement);
 }
 
-function organizeDate(date) {
-    return date.replace(/-/g, '/')
+// FUNÇÃO PARA DELETAR DO LOCALSTORAGE E DEPOIS RELER O LOCALSTORAGE
+
+// ERRO: NAO ESTÁ RESETANDO A PÁGINA
+function deleteElement (id) {
+    database.removeNote(id)
+    readNotes()
 }
+
+deleteElement(6)

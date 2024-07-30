@@ -81,6 +81,7 @@ if (formGanhos) {
             dataBase.createFinanceNote(newForm)
         }
 
+        location.reload()
         closeModal()
     }
 )}
@@ -88,15 +89,16 @@ if (formGanhos) {
 if (formGastos) {
     formGastos.addEventListener('submit', (event) => {
         event.preventDefault()
-
+        
         if (event.submitter.name === 'btnSubmitGastos') {
             const formInfos = getValueForm(event.target.id)
-
+            
             const newForm = new FinanceNotes(formInfos)
-
+            
             dataBase.createFinanceNote(newForm)
         }
-
+        
+        location.reload()
         closeModal()
     }
 )}
