@@ -47,5 +47,7 @@ function nextId () {
 
 const database = new DataBase()
 
+// FAZER FUNÇÃO DE FILTRAR LISTA
+
 // database.removeNote(2)
 // database.resetAll()

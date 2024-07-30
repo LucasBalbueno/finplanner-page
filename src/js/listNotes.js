@@ -22,8 +22,8 @@ function readNotes () {
 
     for (let i = 0; i <= lastId; i++) {
         if (NotesArmazenadas[i]) {
-            const { type } = NotesArmazenadas[i];
-            
+            const { type, id } = NotesArmazenadas[i];
+        
             const typeNote = type.type;
             const title = type.title;
             const infos = type.infos;
@@ -31,9 +31,9 @@ function readNotes () {
             const valor = type.valor;
             
             if (typeNote === 'ganho' && listDataGanhos) {
-                createElement(listDataGanhos, i, title, infos, data, valor);
+                createElement(id, listDataGanhos, title, infos, data, valor);
             } else if (typeNote === 'gasto' && listDataGastos) {
-                createElement(listDataGastos, i, title, infos, data, valor);
+                createElement(id, listDataGastos, title, infos, data, valor);
             }
             
         }
@@ -42,7 +42,7 @@ function readNotes () {
 
 readNotes()
 
-function createElement(form, id, title, infos, data, valor) {
+function createElement(id, form, title, infos, data, valor) {
     const newElement = document.createElement('li');
 
     newElement.innerHTML = `
@@ -50,16 +50,16 @@ function createElement(form, id, title, infos, data, valor) {
             <h3 class="item-descriptionTitle">${title}</h3>
             <p class="item-descriptionInfos">${infos}</p>
         </div>
-    
+    s
         <p class="item-data">${data}</p>
 
         <span class="item-price">R$ ${valor}</span>
 
         <div>
-            <button class="item-edit" data-id="${id + 1}">
+            <button class="item-edit" data-id="${id}">
                 <img class="item-button" src="../../assets/imgs/icons/penEdit.svg" alt="Editar">
             </button>
-            <button class="item-delete" data-id="${id + 1}">
+            <button class="item-delete" data-id="${id}">
                 <img class="item-button" src="../../assets/imgs/icons/trash.svg" alt="Deletar">
             </button>
         </div>
@@ -70,12 +70,16 @@ function createElement(form, id, title, infos, data, valor) {
     form.appendChild(newElement);
 }
 
-// FUNÇÃO PARA DELETAR DO LOCALSTORAGE E DEPOIS RELER O LOCALSTORAGE
-
-// ERRO: NAO ESTÁ RESETANDO A PÁGINA
 function deleteElement (id) {
     database.removeNote(id)
-    readNotes()
+    location.reload()
 }
 
-deleteElement(6)
+const buttonsDelete = document.querySelectorAll('.item-delete')
+
+buttonsDelete.forEach(button => {
+    button.addEventListener('click', (event) => {
+        const noteId = event.currentTarget.getAttribute('data-id');
+        deleteElement(noteId);
+    });
+});
