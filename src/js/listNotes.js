@@ -1,4 +1,6 @@
 import { DataBase } from "./database.js";
+import { openModal,  getValueForm } from './app.js';
+
 const database = new DataBase()
 
 const listDataGanhos = document.getElementById('listDataGanhos');
@@ -57,9 +59,6 @@ function createElement(id, form, title, infos, data, valor) {
         <span class="item-price">R$ ${valor}</span>
 
         <div>
-            <button class="item-edit" data-id="${id}">
-                <img class="item-button" src="../../assets/imgs/icons/penEdit.svg" alt="Editar">
-            </button>
             <button class="item-delete" data-id="${id}">
                 <img class="item-button" src="../../assets/imgs/icons/trash.svg" alt="Deletar">
             </button>
@@ -85,5 +84,35 @@ buttonsDelete.forEach(button => {
     });
 });
 
+function filterList (typeClear) {
+    for (let i = 0; i <= lastId; i++) {
+        const allList = NotesArmazenadas[i];
+        
+        if (allList.type) {
+            if (typeClear === 'removerGanhos') {
+                if (allList.type.type === 'ganho') {
+                    database.removeNote(allList.id)
+                }
+            } if (typeClear === 'removerGastos') {
+                if (allList.type.type === 'gasto') {
+                    database.removeNote(allList.id)
+                }
+            }
+        }
+    }
+    
+    location.reload()
+}
 
-// CRIAR FUNÇÃO DE APAGAR TODO O TIPO (CRIAR FUNÇÃO DE PEGAR O LOCALSOTRAGE, FILTRAR E DEVOLVER)
+const buttonFilterGanhos = document.getElementById('buttonFilterGanhos');
+const buttonFilterGastos = document.getElementById('buttonFilterGastos');
+
+if (buttonFilterGanhos) {
+    buttonFilterGanhos.addEventListener('click', () => {
+        filterList('removerGanhos')
+    })
+} else if (buttonFilterGastos) {
+    buttonFilterGastos.addEventListener('click', () => {
+        filterList('removerGastos')
+    })
+}

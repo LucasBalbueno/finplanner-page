@@ -59,7 +59,7 @@
                 <div class="controles">
                     <input type="search" placeholder="Buscar seus gastos">
                     <div class="controles-buttons">
-                        <button class="btn-reset">
+                        <button id="buttonFilterGastos" class="btn-reset">
                             <img src="../../assets/imgs/icons/refresh.svg" alt="Resetar Lista">
                             <p>Resetar Lista</p>
                         </button>
@@ -88,22 +88,22 @@
                 <form class="formApp" id="formAppGastos">
                     <label class="formApp-item">
                         <p>Título</p>
-                        <input name="title" type="text" placeholder="Jantar Churrascaria..." maxlength="30">
+                        <input name="title" type="text" placeholder="Jantar Churrascaria..." maxlength="30" required>
                     </label>
 
                     <label class="formApp-item">
                         <p>Informação Adicional</p>
-                        <input name="infos" type="text" placeholder="Aniversário do Pablo..."" maxlength="50">
+                        <input name="infos" type="text" placeholder="Aniversário do Pablo..."" maxlength="50" required>
                     </label>
 
                     <label class="formApp-item">
                         <p>Data</p>
-                        <input name="data" type="date"
+                        <input name="data" type="date" required>
                     </label>
 
                     <label class="formApp-item">
                         <p>Valor</p>
-                        <input name="valor" type="number" placeholder="R$">
+                        <input name="valor" type="number" placeholder="R$" required>
                     </label>
 
                     <div class="formApp-buttons">

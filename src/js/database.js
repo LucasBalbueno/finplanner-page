@@ -35,6 +35,11 @@ export class DataBase {
         localStorage.removeItem(id)
     }
 
+    editNote(id, note) {
+        this.removeNote(id)
+        this.createFinanceNote(note)
+    }
+
     resetAll() {
         localStorage.clear()
     }
@@ -47,7 +52,4 @@ function nextId () {
 
 const database = new DataBase()
 
-// FAZER FUNÇÃO DE FILTRAR LISTA
-
-// database.removeNote(2)
 // database.resetAll()

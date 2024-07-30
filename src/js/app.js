@@ -103,3 +103,5 @@ if (formGastos) {
         closeModal()
     }
 )}
+
+export { openModal,  getValueForm }
