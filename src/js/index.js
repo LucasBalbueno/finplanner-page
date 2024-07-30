@@ -2,6 +2,7 @@ import './observer.js';
 import './swiper.js'
 import './app.js'
 import './listNotes.js'
+import './relatorios.js'
 
 window.addEventListener('scroll', () => {
     const header = document.getElementById('cabecalho');

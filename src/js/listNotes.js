@@ -5,7 +5,8 @@ const listDataGanhos = document.getElementById('listDataGanhos');
 const listDataGastos = document.getElementById('listDataGastos');
 
 function organizeDate(date) {
-    return date.replace(/-/g, '/');
+    const [year, month, day] = date.split('-');
+    return `${day}/${month}/${year}`;
 }
 
 const NotesArmazenadas = database.readerNotes();
@@ -50,7 +51,7 @@ function createElement(id, form, title, infos, data, valor) {
             <h3 class="item-descriptionTitle">${title}</h3>
             <p class="item-descriptionInfos">${infos}</p>
         </div>
-    s
+    
         <p class="item-data">${data}</p>
 
         <span class="item-price">R$ ${valor}</span>
@@ -83,3 +84,6 @@ buttonsDelete.forEach(button => {
         deleteElement(noteId);
     });
 });
+
+
+// CRIAR FUNÇÃO DE APAGAR TODO O TIPO (CRIAR FUNÇÃO DE PEGAR O LOCALSOTRAGE, FILTRAR E DEVOLVER)

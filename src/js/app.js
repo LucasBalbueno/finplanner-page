@@ -19,9 +19,10 @@ function closeModal () {
 
     clearInputs()
 }
-
-buttonOpen.addEventListener('click', openModal)
-btnClose.addEventListener('click', closeModal)
+if (buttonOpen && btnClose) {
+    buttonOpen.addEventListener('click', openModal)
+    btnClose.addEventListener('click', closeModal)
+}
 
 // Funcação para pegar os inputs na DOM baseado no name
 function getInputs() {
