@@ -55,58 +55,64 @@
         </header>
 
         <section class="container-principal container-banner">
-            <form id="formConversor" style="color: white;">
-                <label>
-                    <p>Valor de entrada</p>
-                    <input type="number" id="valorIn">
-                </label>
 
-                <label>
-                    <p>código da moeda de entrada</p>
-                    <select name="" id="codeIn">
-                        <option value="select">Selecionar</option>
-                        <option value="BRL">Real</option>
-                        <option value="USD">Dólar Americano</option>
-                        <option value="EUR">Euro</option>
-                        <option value="GBP">Libra Esterlina</option>
-                        <option value="ARS">Peso Argentino</option>
-                        <option value="JPY">Iene Japonês</option>
-                        <option value="CHF">Franco Suíço</option>
-                        <option value="CAD">Dólar Canadense</option>
-                        <option value="AUD">Dólar Australiano</option>
-                        <option value="CNY">Yuan Chinês</option>
-                        <option value="BTC">Bitcoin</option>
-                        <option value="ETH">Ethereum</option>
-                    </select>
-                </label>
+            <h2>Conversor de moedas</h2>
 
-                <label>
-                    <p>código da moeda de saída</p>
-                    <select name="" id="codeOut">
-                        <option value="select">Selecionar</option>
-                        <option value="BRL">Real</option>
-                        <option value="USD">Dólar Americano</option>
-                        <option value="EUR">Euro</option>
-                        <option value="GBP">Libra Esterlina</option>
-                        <option value="ARS">Peso Argentino</option>
-                        <option value="JPY">Iene Japonês</option>
-                        <option value="CHF">Franco Suíço</option>
-                        <option value="CAD">Dólar Canadense</option>
-                        <option value="AUD">Dólar Australiano</option>
-                        <option value="CNY">Yuan Chinês</option>
-                        <option value="BTC">Bitcoin</option>
-                        <option value="ETH">Ethereum</option>
-                    </select>
-                </label>
+            <div class="container-forms">
+                <form id="formConversor">
+                    <div class="formEntradas">
+                        <label>
+                            <p class="formsTexts">Valores de entrada</p>
+                            <input class="conversorInput-valor" type="number" id="valorIn" placeholder="$1500">
 
-                <button id="conversorButton" type="submit" style="background-color: orange;">
-                    Converter
-                </button>
-            </form>
+                            <select class="conversorInput-codeIn" name="" id="codeIn">
+                                <option value="select">Selecionar</option>
+                                <option value="BRL">Real</option>
+                                <option value="USD">Dólar Americano</option>
+                                <option value="EUR">Euro</option>
+                                <option value="GBP">Libra Esterlina</option>
+                                <option value="ARS">Peso Argentino</option>
+                                <option value="JPY">Iene Japonês</option>
+                                <option value="CHF">Franco Suíço</option>
+                                <option value="CAD">Dólar Canadense</option>
+                                <option value="AUD">Dólar Australiano</option>
+                                <option value="CNY">Yuan Chinês</option>
+                                <option value="BTC">Bitcoin</option>
+                                <option value="ETH">Ethereum</option>
+                            </select>
+                        </label>
+                    </div>
+    
+                    <label>
+                        <p class="formsTexts">Moeda de saída</p>
+                        <select class="conversorInput-codeOut" name="" id="codeOut">
+                            <option value="select">Selecionar</option>
+                            <option value="BRL">Real</option>
+                            <option value="USD">Dólar Americano</option>
+                            <option value="EUR">Euro</option>
+                            <option value="GBP">Libra Esterlina</option>
+                            <option value="ARS">Peso Argentino</option>
+                            <option value="JPY">Iene Japonês</option>
+                            <option value="CHF">Franco Suíço</option>
+                            <option value="CAD">Dólar Canadense</option>
+                            <option value="AUD">Dólar Australiano</option>
+                            <option value="CNY">Yuan Chinês</option>
+                            <option value="BTC">Bitcoin</option>
+                            <option value="ETH">Ethereum</option>
+                        </select>
+                    </label>
+    
+                    <button id="conversorButton" type="submit">
+                        Converter
+                    </button>
+                </form>
+            </div>
 
-            <h1 id="valorOut" style="color: white;">
-                $ 0
-            </h1>
+            <div class="container-saida">
+                <h1 id="valorOut">
+                    $ 0
+                </h1>
+            </div>
         </section>
     </main>
 

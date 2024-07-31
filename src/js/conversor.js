@@ -45,7 +45,7 @@ if (conversorButton) {
 
             try {
                 const data = await requestApi(codeIn.value, codeOut.value);
-                valorOut.textContent = `R$ ${calcularConversao(data)}`;
+                valorOut.textContent = `$ ${calcularConversao(data)} ${codeOut.value}`;
             } catch (error) {
                 console.error(`Erro ao buscar dados da API: ${error}`);
             }

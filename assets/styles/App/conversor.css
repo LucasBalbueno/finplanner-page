@@ -1,0 +1,93 @@
+.container-forms {
+    width: 60%;
+    padding: 2rem;
+    background-color: var(--color-background);
+    border-radius: 20px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-saida {
+    background-color: var(--color-background);
+    width: 60%;
+    height: 20%;
+    border-radius: 20px;
+    padding: 2rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-saida > h1 {
+    font-family: var(--font-title);
+    font-weight: 600;
+    font-size: 30px;
+
+    background-image: linear-gradient(to right, var(--colorlight-gradient), var(--colorstrong-gradient));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+#formConversor{
+    width: 50%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.conversorInput-valor {
+    width: auto;
+    height: 3rem;
+    padding: 1rem;
+    border-radius: 15px 0 0 15px;
+    border: none;
+    background-color: var(--color-gray);
+}
+
+.conversorInput-valor::placeholder {
+    color: black;
+    opacity: 60%;
+}
+
+.formEntradas {
+    display: flex;
+}
+
+.conversorInput-codeIn {
+    background-color: var(--color-gray);
+    border: none;
+    width: 40%;
+    height: 3rem;
+    border-radius: 0 15px 15px 0;
+}
+
+.conversorInput-codeOut {
+    border-radius: 15px;
+    display: block;
+    width: 100%;
+    height: 3rem;
+    padding: 1rem;
+    border: none;
+    background-color: var(--color-gray);
+}
+
+.formsTexts {
+    font-family: var(--font-text);
+    font-size: 25px;
+    color: var(--color-text);
+    margin: 1.5rem 0 .5rem 0;
+}
+
+#conversorButton{
+    background: linear-gradient(to bottom, var(--colorlight-gradient), var(--colorstrong-gradient));
+    padding: 1rem;
+    border-radius: 20px;
+    color: var(--color-text);
+    margin-top: 2rem;
+}
