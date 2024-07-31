@@ -17,14 +17,28 @@
 
 :root {
     --color-background: #262525;
+    --color-secondBackground: #2b2b2b;
     --color-text: #fff;
-
+    --color-border: #333333;
+    --color-list: #4a4949;
+    
+    --color-green: rgb(146, 212, 47);
+    --color-red: red;
+    --color-orange: orange;
+    --color-gray: rgb(182, 182, 182);
     --colorlight-gradient: rgb(139, 18, 252);
     --colorstrong-gradient: rgb(111, 18, 245);
-
-    --color-gray: rgb(182, 182, 182);
+    
     --font-title: 'Montserrat', sans-serif;
     --font-text: 'Roboto', sans-serif;
+}
+
+.light:root {
+    --color-background: #eeeeee;
+    --color-secondBackground: #ffffff;
+    --color-text: #1d1d1d;
+    --color-border: rgb(182, 182, 182);
+    --color-list: rgb(207, 207, 207);
 }
 
 html {

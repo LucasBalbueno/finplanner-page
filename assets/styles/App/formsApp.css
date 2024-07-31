@@ -30,12 +30,12 @@
     font-family: var(--font-title);
     font-size: 25px;
     font-weight: bold;
-    color: rgb(146, 212, 47);
+    color: var(--color-green);
 }
 
 .formApp {
     font-family: var(--font-text);
-    color: white;
+    color: var(--color-text);
     width: 50%;
 }
 
@@ -53,6 +53,7 @@
     height: .5rem;
     padding: 1.5rem;
     border-radius: 10px;
+    border: none;
 }
 
 .formApp-buttons {
@@ -71,9 +72,11 @@
 }
 
 .btn-check {
-    background-color: rgb(146, 212, 47);
+    background-color: var(--color-green);
+    color: var(--color-text);
 }
 
 .btn-close{
-    background-color: red;
+    background-color: var(--color-red);
+    color: var(--color-text);
 }

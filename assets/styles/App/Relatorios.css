@@ -20,7 +20,7 @@
     font-weight: 600;
     padding: 2rem;
     
-    color: rgb(6, 171, 6);
+    color: var(--color-green);
     
     border: 3px solid var(--colorlight-gradient);;
     border-radius: 20px;
@@ -39,7 +39,7 @@
     font-weight: 600;
     padding: 2rem;
     
-    color: rgb(229, 37, 37);
+    color: var(--color-red);
     
     border: 3px solid var(--colorlight-gradient);;
     border-radius: 20px;
