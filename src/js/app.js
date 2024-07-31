@@ -8,12 +8,10 @@ const modalForms = document.getElementById('formsApp');
 const formGanhos = document.getElementById('formAppGanhos');
 const formGastos = document.getElementById('formAppGastos');
 
-// function Abre o forms
 function openModal () {
     modalForms.classList.add('formActivated');
 }
 
-// function fecha o forms
 function closeModal () {
     modalForms.classList.remove('formActivated');
 
@@ -24,7 +22,6 @@ if (buttonOpen && btnClose) {
     btnClose.addEventListener('click', closeModal)
 }
 
-// Funcação para pegar os inputs na DOM baseado no name
 function getInputs() {
     return {
         title: document.querySelector('[name="title"]'),
@@ -34,7 +31,6 @@ function getInputs() {
     }
 }
 
-// função para limpar os inputs
 function clearInputs() {
     const inputs = getInputs();
 
@@ -44,7 +40,6 @@ function clearInputs() {
     inputs.valor.value = '';
 }
 
-// Função para pegar os valores do inputs
 function getValueForm(idForm) {
     const inputs = getInputs();
 

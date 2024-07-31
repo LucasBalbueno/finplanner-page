@@ -1,5 +1,4 @@
 import { DataBase } from "./database.js";
-import { openModal,  getValueForm } from './app.js';
 
 const database = new DataBase()
 
@@ -84,24 +83,29 @@ buttonsDelete.forEach(button => {
     });
 });
 
-function filterList (typeClear) {
+function filterList(typeClear) {
+
     for (let i = 0; i <= lastId; i++) {
         const allList = NotesArmazenadas[i];
         
-        if (allList.type) {
-            if (typeClear === 'removerGanhos') {
-                if (allList.type.type === 'ganho') {
-                    database.removeNote(allList.id)
-                }
-            } if (typeClear === 'removerGastos') {
-                if (allList.type.type === 'gasto') {
-                    database.removeNote(allList.id)
-                }
+        if (allList && allList.type) {
+            if (typeClear === 'removerGanhos' && allList.type.type === 'ganho') {
+                database.removeNote(allList.id);
+            } else if (typeClear === 'removerGastos' && allList.type.type === 'gasto') {
+                database.removeNote(allList.id);
             }
         }
     }
     
-    location.reload()
+    if (listDataGanhos) {
+        listDataGanhos.innerHTML = '';
+    }
+    
+    if (listDataGastos) {
+        listDataGastos.innerHTML = '';
+    }
+
+    window.location.reload();
 }
 
 const buttonFilterGanhos = document.getElementById('buttonFilterGanhos');
@@ -109,10 +113,12 @@ const buttonFilterGastos = document.getElementById('buttonFilterGastos');
 
 if (buttonFilterGanhos) {
     buttonFilterGanhos.addEventListener('click', () => {
-        filterList('removerGanhos')
-    })
-} else if (buttonFilterGastos) {
+        filterList('removerGanhos');
+    });
+}
+
+if (buttonFilterGastos) {
     buttonFilterGastos.addEventListener('click', () => {
-        filterList('removerGastos')
-    })
+        filterList('removerGastos');
+    });
 }

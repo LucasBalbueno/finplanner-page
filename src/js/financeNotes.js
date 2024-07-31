@@ -7,7 +7,6 @@ export class FinanceNotes {
         this.valor = valor;
     }
 
-    // função para validar dados
     validateData(){
         for (let i in this){
             if(this[i] === undefined || this[i] === ""){
