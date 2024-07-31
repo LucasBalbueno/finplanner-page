@@ -26,3 +26,30 @@
   background-clip: text;
   color: transparent;
 }
+
+@media screen and (max-width:1100px) {
+  .container-banner {
+    justify-content: start;
+    padding: 4rem 0;
+  }
+
+  .container-banner > h2 {
+    font-size: 35px;
+    text-align: center;
+    padding: 0 3rem;
+  }
+
+  .swiper {
+    width: 90vw;
+    height: 50%;
+  }
+  
+  .main {
+    display: inline;
+  }
+
+  .container-principal {
+    justify-content: start;
+    height: calc(100vh - 5rem);
+  }
+}

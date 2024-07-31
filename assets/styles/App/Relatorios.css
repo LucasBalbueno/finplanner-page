@@ -69,3 +69,28 @@
     justify-content: center;
     align-items: center;
 }
+
+@media screen and (max-width:1100px) {
+    .container-relatorio {
+        margin-top: 5rem;
+    }
+
+    .relatorio-valores {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .valores-ganhos, .valores-gastos, .valores-saldo {
+        width: 95%;
+    }
+    
+    .relatorio-saldo {
+        margin-top: 5rem;
+    }
+    
+    .valores-saldo {
+        margin: 0;
+        height: auto;
+    }
+}

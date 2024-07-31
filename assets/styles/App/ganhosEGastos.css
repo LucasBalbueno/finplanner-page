@@ -3,6 +3,8 @@
     width: 90%;
     height: 85vh;
     border-radius: 20px;
+
+    overflow-y: scroll;
 }
 
 .controles {
@@ -108,4 +110,47 @@
     font-weight: bold;
 
     color: var(--color-text);
+}
+
+@media screen and (max-width:1100px) {
+    .campo-informacoes {
+        height: 80%;
+        margin-top: 3rem;
+    }
+
+    .controles {
+        flex-direction: column;
+        text-align: center;
+        height: auto;
+        gap: 1rem;
+        padding: 2rem 1rem;
+    }
+
+    .text-controles {
+        font-size: 20px;
+    }
+
+    .lista-item {
+        height: 12rem;
+        flex-direction: column;
+    }
+    
+    .item-description {
+        gap: 0;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+    
+    .item-data {
+        margin-bottom: .5rem;
+    }
+    
+    .item-price {
+        margin-bottom: 1rem;
+    }
+    
+    .item-button {
+        width: 25px;
+        margin-left: 0;
+    }
 }

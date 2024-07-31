@@ -20,3 +20,14 @@ Array.from(planButtons).forEach(button => {
         alert('Novo plano selecionado com sucesso!');
     });
 });
+
+const menuHamburguer = document.getElementsByClassName('menuHamburguer')[0];
+const buttonHambuguer = document.getElementsByClassName('menuHamburguer-button')[0];
+
+function toggleMenu () {
+    menuHamburguer.classList.toggle('menuToggle');
+}
+
+if (buttonHambuguer) {
+    buttonHambuguer.addEventListener('click', toggleMenu)
+}

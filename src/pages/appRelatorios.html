@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FinPlanner Relatórios</title>
-    <link rel="icon" href="../../assets/imgs/icons/wallet-fill.svg"" type=" image/svg+xml">
+    <link rel="icon" href="../../assets/imgs/icons/wallet-fill.svg" type=" image/svg+xml">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="../../assets/styles/style.css">
 </head>
@@ -15,10 +15,15 @@
         <header class="menu-lateral-app">
             <div>
 
-                <div>
+                <div class="container-title">
                     <div class="title-project-lateral">
-                        <img src="../../assets/imgs/icons/wallet-fill.svg" alt="Logo FinPlanner">
-                        <h1 class="name-project">finplanner</h1>
+                        <div class="menuHamburguer-button">
+                            <img src="../../assets/imgs/icons/hamburguerMenu.svg" alt="Menu Responsivo">
+                        </div>
+                        <div class="title-projet-logo">
+                            <img src="../../assets/imgs/icons/wallet-fill.svg" alt="Logo FinPlanner">
+                            <h1 class="name-project">finplanner</h1>
+                        </div>
                     </div>
                 </div>
 
@@ -54,7 +59,37 @@
             </button>
         </header>
 
-        <section class="container-principal container-banner">
+        <header class="menuHamburguer">
+            <nav class="cabecalho-navegacao-hamburguer">
+                <ul class="navegacao-lista">
+                    <li class="active">
+                        <img src="../../assets/imgs/icons/home.svg" alt="Icone Relatórios">
+                        <a href="./app.html">Menu</a>
+                    </li>
+                    <li>
+                        <img src="../../assets/imgs/icons/relatorios.svg" alt="Icone Relatórios">
+                        <a href="./appRelatorios.html">Relatórios</a>
+                    </li>
+                    <li>
+                        <img src="../../assets/imgs/icons/ganhos.svg" alt="Icone Ganhos">
+                        <a href="./appGanhos.html">Ganhos</a>
+                    </li>
+                    <li>
+                        <img src="../../assets/imgs/icons/gastos.svg" alt="Icone Gastos">
+                        <a href="./appGastos.html">Gastos</a>
+                    </li>
+                    <li>
+                        <img src="../../assets/imgs/icons/conversor.svg" alt="Icone Conversor de moedas">
+                        <a href="./conversor.html">Converter moedas</a>
+                    </li>
+                    <li class="btn-toggleMode">
+                        Mudar de Tema
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="container-principal">
             <div class="container-relatorio">
                 <div class="relatorio-valores">
                     <div class="valores-ganhos">

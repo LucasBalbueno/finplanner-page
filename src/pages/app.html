@@ -15,10 +15,15 @@
         <header class="menu-lateral-app">
             <div>
 
-                <div>
+                <div class="container-title">
                     <div class="title-project-lateral">
-                        <img src="../../assets/imgs/icons/wallet-fill.svg" alt="Logo FinPlanner">
-                        <h1 class="name-project">finplanner</h1>
+                        <div class="menuHamburguer-button">
+                            <img src="../../assets/imgs/icons/hamburguerMenu.svg" alt="Menu Responsivo">
+                        </div>
+                        <div class="title-projet-logo">
+                            <img src="../../assets/imgs/icons/wallet-fill.svg" alt="Logo FinPlanner">
+                            <h1 class="name-project">finplanner</h1>
+                        </div>
                     </div>
                 </div>
 
@@ -54,29 +59,60 @@
             </button>
         </header>
 
-        <section class="container-principal container-banner">
-            <h2>Controle suas finanças Hoje!</h2>
-            <!-- Slider main container -->
-            <div class="swiper">
-                <!-- Additional required wrapper -->
-                <div class="swiper-wrapper">
-                    <!-- Slides -->
-                    <div class="swiper-slide">
-                        <img src="../../assets/imgs/ImgCarousel.jpg" alt="Banner Principal 1">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="../../assets/imgs/ImgCarousel2.jpg" alt="Banner Principal 2">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="../../assets/imgs/ImgCarousel3.png" alt="Banner Principal 3">
-                    </div>
-                </div>
+        <header class="menuHamburguer">
+            <nav class="cabecalho-navegacao-hamburguer">
+                <ul class="navegacao-lista">
+                    <li class="active">
+                        <img src="../../assets/imgs/icons/home.svg" alt="Icone Relatórios">
+                        <a href="./app.html">Menu</a>
+                    </li>
+                    <li>
+                        <img src="../../assets/imgs/icons/relatorios.svg" alt="Icone Relatórios">
+                        <a href="./appRelatorios.html">Relatórios</a>
+                    </li>
+                    <li>
+                        <img src="../../assets/imgs/icons/ganhos.svg" alt="Icone Ganhos">
+                        <a href="./appGanhos.html">Ganhos</a>
+                    </li>
+                    <li>
+                        <img src="../../assets/imgs/icons/gastos.svg" alt="Icone Gastos">
+                        <a href="./appGastos.html">Gastos</a>
+                    </li>
+                    <li>
+                        <img src="../../assets/imgs/icons/conversor.svg" alt="Icone Conversor de moedas">
+                        <a href="./conversor.html">Converter moedas</a>
+                    </li>
+                    <li class="btn-toggleMode">
+                        Mudar de Tema
+                    </li>
+                </ul>
+            </nav>
+        </header>
 
-                <!-- If we need navigation buttons -->
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-
-                <!-- If we need scrollbar -->
+        <section class="container-principal">
+            <div class="container-banner">
+                <h2>Controle suas finanças Hoje!</h2>
+                <!-- Slider main container -->
+                <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <img src="../../assets/imgs/ImgCarousel.jpg" alt="Banner Principal 1">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="../../assets/imgs/ImgCarousel2.jpg" alt="Banner Principal 2">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="../../assets/imgs/ImgCarousel3.png" alt="Banner Principal 3">
+                        </div>
+                    </div>
+                    
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                    
+                    <!-- If we need scrollbar -->
                 <div class="swiper-scrollbar"></div>
             </div>
 
